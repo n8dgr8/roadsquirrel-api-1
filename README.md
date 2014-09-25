@@ -1,4 +1,4 @@
 Road Squirrel API
 ================
 
-[ ![Codeship Status for PillarTechnology/RoadSquirrel-api](https://codeship.io/projects/f2916c20-262a-0132-ceba-4a1a59b08b89/status)](https://codeship.io/projects/37376)
+[![Build Status](https://semaphoreapp.com/api/v1/projects/a3b5380b-88cb-4af4-b19b-ec75a6dc0b9d/255299/shields_badge.png)](https://semaphoreapp.com/delasteve/roadsquirrel-api)
