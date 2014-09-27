@@ -18,4 +18,4 @@ gulp.task('test', function mocha() {
     }));
 });
 
-gulp.task('default', [ 'lint' ]);
+gulp.task('default', [ 'lint', 'test' ]);
