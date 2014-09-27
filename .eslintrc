@@ -114,7 +114,7 @@
     "no-wrap-func": 2,
     "no-mixed-spaces-and-tabs": 2,
     "quotes": [2, "single"],
-    "quote-props": 2,
+    "quote-props": 0,
     "semi": 2,
     "sort-vars": 0,
     "space-after-keywords": 2,
