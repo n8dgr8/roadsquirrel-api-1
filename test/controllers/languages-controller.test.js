@@ -4,7 +4,7 @@ describe('controllers/languages-controller.js', function() {
   var languagesController;
 
   beforeEach(function () {
-    languagesController = require('../../app/controllers/languages-controller');
+    languagesController = require('../../src/controllers/languages-controller');
   });
 
   describe('GET /languages', function() {

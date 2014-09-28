@@ -9,7 +9,7 @@ function isCIEnvironment() {
 }
 
 gulp.task('lint', function eslint() {
-  return gulp.src([ 'app/**/*.js', 'test/**/*.js', 'config/**/*.js', 'gulpfile.js', 'server.js' ])
+  return gulp.src([ 'src/**/*.js', 'test/**/*.js', 'config/**/*.js', 'gulpfile.js', 'server.js' ])
     .pipe(plugins.eslint())
     .pipe(plugins.eslint.format())
     .pipe(plugins.if(isCIEnvironment(), plugins.eslint.failOnError()));
@@ -28,8 +28,8 @@ gulp.task('test', function mocha() {
 });
 
 gulp.task('watch', [ 'lint', 'test' ], function watch() {
-  gulp.watch([ 'app/**/*.js', 'test/**/*.js' ], [ 'test' ]);
-  gulp.watch([ 'app/**/*.js', 'test/**/*.js', 'config/**/*.js', 'gulpfile.js', 'server.js' ], [ 'lint' ]);
+  gulp.watch([ 'src/**/*.js', 'test/**/*.js' ], [ 'test' ]);
+  gulp.watch([ 'src/**/*.js', 'test/**/*.js', 'config/**/*.js', 'gulpfile.js', 'server.js' ], [ 'lint' ]);
 });
 
 gulp.task('default', [ 'lint', 'test' ]);
