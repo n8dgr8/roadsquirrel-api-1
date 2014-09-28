@@ -14,16 +14,16 @@ describe('controllers/languages-controller.js', function() {
       }
     };
 
-    it('should respond with a list of languages', function() {
+    it('should respond with an object', function() {
       var controllerResponse = languagesController.get(null, response);
 
-      controllerResponse.should.have.property('languages');
+      should.exist(controllerResponse);
     });
 
-    it('has a response property [languages] of type array', function() {
+    it('has a response of type array', function() {
       var controllerResponse = languagesController.get(null, response);
 
-      controllerResponse.languages.should.be.a('array');
+      controllerResponse.should.be.a('array');
     });
   });
 });

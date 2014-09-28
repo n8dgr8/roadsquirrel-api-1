@@ -4,5 +4,8 @@
   },
   "rules": {
     "func-names": 0
+  },
+  "globals": {
+    "should": true
   }
 }
