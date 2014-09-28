@@ -14,6 +14,9 @@ gulp.task('test', function mocha() {
     .pipe(plugins.mocha({
       ui: 'bdd',
       reporter: 'spec',
+      globals: {
+        testHelper: require('./test/helpers/chai')
+      },
       growl: true
     }));
 });
