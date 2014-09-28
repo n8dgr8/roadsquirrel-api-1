@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:PillarTechnology/RoadSquirrel-api.git"
+    "url": "git@github.com:PillarTechnology/roadsquirrel-api.git"
   },
   "dependencies": {
     "express": "^4.9.5"
@@ -23,7 +23,9 @@
     "chai": "^1.9.1",
     "gulp": "^3.8.8",
     "gulp-eslint": "^0.1.8",
+    "gulp-if": "^1.2.4",
     "gulp-load-plugins": "^0.6.0",
-    "gulp-mocha": "^1.1.0"
+    "gulp-mocha": "^1.1.0",
+    "lodash": "^2.4.1"
   }
 }

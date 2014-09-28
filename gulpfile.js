@@ -2,11 +2,17 @@
 
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
+var _ = require('lodash');
+
+function isCIEnvironment() {
+  return !_.isUndefined(process.env.CI);
+}
 
 gulp.task('lint', function eslint() {
-  return gulp.src([ 'app/**/*.js', 'test/**/*.js', 'gulpfile.js', 'server.js' ])
+  return gulp.src([ 'app/**/*.js', 'test/**/*.js', 'config/**/*.js', 'gulpfile.js', 'server.js' ])
     .pipe(plugins.eslint())
-    .pipe(plugins.eslint.format());
+    .pipe(plugins.eslint.format())
+    .pipe(plugins.if(isCIEnvironment(), plugins.eslint.failOnError()));
 });
 
 gulp.task('test', function mocha() {
@@ -19,6 +25,11 @@ gulp.task('test', function mocha() {
       },
       growl: true
     }));
+});
+
+gulp.task('watch', [ 'lint', 'test' ], function watch() {
+  gulp.watch([ 'app/**/*.js', 'test/**/*.js' ], [ 'test' ]);
+  gulp.watch([ 'app/**/*.js', 'test/**/*.js', 'config/**/*.js', 'gulpfile.js', 'server.js' ], [ 'lint' ]);
 });
 
 gulp.task('default', [ 'lint', 'test' ]);
