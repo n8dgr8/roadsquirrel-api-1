@@ -4,8 +4,6 @@ var express = require('express');
 var app = express();
 var port = process.env.PORT || 3000;
 
-app.get('/', function helloworld(request, response){
-  response.send('Hello World');
-});
+require('./config/routes')(app);
 
 app.listen(port);
