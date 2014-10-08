@@ -21,13 +21,14 @@ gulp.task('test', function mocha() {
       ui: 'bdd',
       reporter: 'spec',
       globals: {
-        testHelper: require('./test/helpers/chai')
+        testHelper: require('./test/helpers/chai'),
+        sinon: require('./test/helpers/sinon')
       },
       growl: true
     }));
 });
 
-gulp.task('watch', [ 'lint', 'test' ], function watch() {
+gulp.task('watch', function watch() {
   gulp.watch([ 'src/**/*.js', 'test/**/*.js' ], [ 'test' ]);
   gulp.watch([ 'src/**/*.js', 'test/**/*.js', 'config/**/*.js', 'gulpfile.js', 'server.js' ], [ 'lint' ]);
 });

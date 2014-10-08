@@ -17,7 +17,9 @@
     "url": "git@github.com:PillarTechnology/roadsquirrel-api.git"
   },
   "dependencies": {
-    "express": "^4.9.5"
+    "bookshelf": "^0.7.7",
+    "express": "^4.9.5",
+    "knex": "^0.7.3"
   },
   "devDependencies": {
     "chai": "^1.9.1",
@@ -26,6 +28,7 @@
     "gulp-if": "^1.2.4",
     "gulp-load-plugins": "^0.6.0",
     "gulp-mocha": "^1.1.0",
-    "lodash": "^2.4.1"
+    "lodash": "^2.4.1",
+    "sinon": "^1.10.3"
   }
 }
