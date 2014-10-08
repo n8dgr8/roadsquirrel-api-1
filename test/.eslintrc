@@ -6,6 +6,7 @@
     "func-names": 0
   },
   "globals": {
-    "should": true
+    "should": true,
+    "sinon": true
   }
 }
